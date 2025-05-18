@@ -1,0 +1,127 @@
+# A01:2021 - Broken Access Control
+admin' --
+admin' #
+-1 OR 1=1
+UNION ALL SELECT
+/etc/passwd
+../../../
+.htaccess
+wp-config.php
+
+# A02:2021 - Cryptographic Failures
+md5(
+base64_decode(
+rot13(
+eval(
+
+# A03:2021 - Injection
+' OR '1'='1
+" OR "1"="1
+1 OR 1=1
+UNION SELECT
+INSERT INTO
+DELETE FROM
+DROP TABLE
+EXEC xp_
+; exec
+WAITFOR DELAY
+sleep(
+benchmark(
+
+# A04:2021 - Insecure Design
+/admin/
+/config/
+/backup/
+/install/
+/setup/
+phpinfo()
+/phpMyAdmin/
+
+# A05:2021 - Security Misconfiguration
+X-Frame-Options
+X-XSS-Protection
+X-Content-Type-Options
+.git/
+.env
+.config
+debug=true
+
+# A06:2021 - Vulnerable Components
+log4j
+spring.cloud.config
+struts2
+apache.struts
+javax.faces
+
+# A07:2021 - Auth Failures
+password=
+pwd=
+pass=
+credentials
+authentication
+bearer 
+basic 
+
+# A08:2021 - Software Integrity
+npm install
+pip install
+gem install
+composer require
+
+# A09:2021 - Logging Failures
+error_reporting(
+display_errors
+show_errors
+debug_backtrace
+
+# A10:2021 - SSRF
+http://169.254.169.254
+http://127.0.0.1
+localhost:
+file:///
+gopher://
+
+# XSS Attacks
+<script>
+javascript:
+onerror=
+onload=
+eval(
+document.cookie
+alert(
+prompt(
+confirm(
+
+# Command Injection
+; ls
+; dir
+; cat
+; pwd
+& whoami
+| echo
+` ping
+
+# File Upload
+.php
+.asp
+.jsp
+.exe
+.dll
+.bat
+.cmd
+
+# Path Traversal
+../
+..\
+%2e%2e%2f
+%252e%252e%252f
+
+# SQL Injection Advanced
+HAVING 1=1
+GROUP BY
+ORDER BY 1--
+CONVERT(
+char(
+declare @
+exec sp_
+xp_cmdshell
